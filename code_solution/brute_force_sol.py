@@ -1,20 +1,25 @@
 import sys
+from datetime import datetime
+
+vertices = {}
+num_edges = 0
+edges = [[]]
 
 #Find out if a given set of vertices is a clique
-def is_clique(u, v, vertices, edges):
+def is_clique(t):
 
     #loop over all possible edges between vertices
-    for i in range(u, v):
-        for j in range(u + 1, v):
+    for i in range(1, t):
+        for j in range(i + 1, t):
             
             #if an edge is missing then return false
-            if(edges[vertices.get(i)][vertices.get(j)] == 0):
+            if(edges[vertices.get(chr(i + 96))][vertices.get(chr(j + 96))] == 0):
                 return False
     
     return True
 
 
-def max_cliques(vertices, edges):
+def max_cliques(s, e):
 
     mc = 0
 
@@ -22,43 +27,53 @@ def max_cliques(vertices, edges):
     num_v = len(vertices.keys())
 
     #check every vertex eventually
-    for i in range(1, num_v + 1):
+    for i in range(s + 1, num_v + 1):
 
-        if (is_clique(i, i, vertices, edges)):
+        if (is_clique(e + 1)):
 
-            mc = max(mc, i)
+            mc = max(mc, e)
 
-            mc = max(mc, max_cliques(i, i + 1, vertices, edges))
+            mc = max(mc, max_cliques(i, e + 1))
 
     return mc
 
 
-if name == '__main__':
+if __name__ == '__main__':
+    now = datetime.now()
+    curr_time = now.strftime("%H: %M: %S")
+    print("Current time = ", curr_time)
     file_name = sys.argv[1]
+    alphabet_map = {chr(i + 96): i for i in range(1, 27)}
 
-    vertices = {}
-    num_edges = 0
-    edges = [[0 for i in range(num_edges)] for j in range(num_edges)]
-
-    with open(file_name, "r") as file:
+    with open("./test_cases/" + file_name, "r") as file:
         for line in file:
-            if num_edges == 0:
+            if (num_edges == 0):
                 num_edges = int(line.strip())
-            else
-                if str[0] in vertices and str[2] in vertices:
-                    edges[vertices.get(str[0])][vertices.get(str[2])] = 1
-                else if str[0] in vertices:
-                    vertices[str[2]] = (str[2].ord() % 64)
-                    edges[vertices.get(str[0])][vertices.get(str[2])] = 1
-                else if str[2] in vertices:
-                    vertices[str[0]] = (str[0].ord() % 64)
-                    edges[vertices.get(str[0])][vertices.get(str[2])] = 1
+                edges = [[0 for i in range(num_edges)] for j in range(num_edges)]
+            else:
+                if (line[0] in vertices and line[2] in vertices):
+                    edges[vertices.get(line[0])][vertices.get(line[2])] = 1
+                    edges[vertices.get(line[2])][vertices.get(line[0])] = 1
+                elif (line[0] in vertices):
+                    vertices[line[2]] = alphabet_map[line[2]]
+                    edges[vertices.get(line[0])][vertices.get(line[2])] = 1
+                    edges[vertices.get(line[2])][vertices.get(line[0])] = 1
+                elif (line[2] in vertices):
+                    vertices[line[0]] = alphabet_map[line[0]]
+                    edges[vertices.get(line[0])][vertices.get(line[2])] = 1
+                    edges[vertices.get(line[2])][vertices.get(line[0])] = 1
                 else:
-                    vertices[str[0]] = (str[0].ord() % 64)
-                    vertices[str[2]] = (str[2].ord() % 64)
-                    edges[vertices.get(str[0])][vertices.get(str[2])]
+                    vertices[line[0]] = alphabet_map[line[0]]
+                    vertices[line[2]] = alphabet_map[line[2]]
+                    edges[vertices.get(line[0])][vertices.get(line[2])] = 1
+                    edges[vertices.get(line[2])][vertices.get(line[0])] = 1
+
     
-    max_cliques(vertices, edges)
+    mc = max_cliques(0, 1)
+    now = datetime.now()
+    curr_time = now.strftime("%H: %M: %S")
+    print("Current time = ", curr_time)
+    print(mc)
 
 
         
