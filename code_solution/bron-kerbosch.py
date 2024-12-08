@@ -1,42 +1,33 @@
-#Citation: geeksforgeeks maximal clique problem recursive solution
-# https://www.geeksforgeeks.org/maximal-clique-problem-recursive-solution/
-
+#Based on the Bron-Kerbosch Algorithm without Pivoting or Vertex Ordering
+#Citation: Wikipedia https://en.wikipedia.org/wiki/Bron%E2%80%93Kerbosch_algorithm
+#https://gist.github.com/abhin4v/8304062 which is in the wiki pages external links
 import sys
 from datetime import datetime
+from collections import defaultdict
 
-vertices = {}
-num_edges = 0
-edges = []
+#graph is based on adjacency list
+#vertices being keys with a list of neighbors for values
+def find_cliques(graph):
+    p = set(graph.keys())
+    r = set()
+    x = set()
+    cliques = []
 
-#Find out if a given set of vertices is a clique
-def is_clique(t):
+    bron-kerbosch1(r, p, x, cliques, graph)
 
-    #loop over all possible edges between vertices
-    for i in range(1, t):
-        for j in range(i + 1, t):
-            
-            #if an edge is missing then return false
-            if(edges[vertices.get(chr(i + 96))][vertices.get(chr(j + 96))] == 0):
-                return False
-    
-    return True
+    return sorted(cliques, lambda x: len(x))
 
-
-def max_cliques(s, e):
-
-    mc = 0
-
-    #number of vertices
-    num_v = len(vertices.keys())
-
-    #check every vertex eventually
-    for i in range(s, num_v):
-        # Add current vertex to potential clique
-        if is_clique(e):
-            mc = max(mc, e)
-            mc = max(mc, max_cliques(i + 1, e + 1))
-
-    return mc
+#Does reporting of cliques and set manipulation
+#Basic version based off of wiki page
+def bron-kerbosch1(R, P, X, cliques, graph):
+    if len(P) == 0 and len(X) == 0:
+        cliques.append(R)
+    else:
+        for v in P:
+            neighbors = graph[v]
+            bron-kerbosch1(R.union([v]), P.intersection(neighbors), X.intersection(neighbors), cliques, graph)
+            P.remove(v)
+            X.add(v)
 
 
 if __name__ == '__main__':
@@ -69,12 +60,20 @@ if __name__ == '__main__':
                     edges[vertices.get(line[0])][vertices.get(line[2])] = 1
                     edges[vertices.get(line[2])][vertices.get(line[0])] = 1
 
-    
-    mc = max_cliques(0, 1)
+    graph = {}
+
+    for v in vertices.keys():
+        neighbors = []
+        for i in range(1, len(edges[v])):
+            if edges[v][i] == 1:
+                neighbors.append(i)
+
+        graph[vertices[v]] = neighbors
+
+    cliques = find_cliques(graph)
+
     now = datetime.now()
     curr_time = now.strftime("%H: %M: %S")
     print("Current time = ", curr_time)
-    print(mc)
 
-
-        
+    print(len(cliques[0]))
