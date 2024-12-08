@@ -1,4 +1,4 @@
-190
+231
 a b
 a c
 a d
@@ -18,6 +18,8 @@ a q
 a r
 a s
 a t
+a u
+a v
 b c
 b d
 b e
@@ -36,6 +38,8 @@ b q
 b r
 b s
 b t
+b u
+b v
 c d
 c e
 c f
@@ -53,6 +57,8 @@ c q
 c r
 c s
 c t
+c u
+c v
 d e
 d f
 d g
@@ -69,6 +75,8 @@ d q
 d r
 d s
 d t
+d u
+d v
 e f
 e g
 e h
@@ -84,6 +92,8 @@ e q
 e r
 e s
 e t
+e u
+e v
 f g
 f h
 f i
@@ -98,6 +108,8 @@ f q
 f r
 f s
 f t
+f u
+f v
 g h
 g i
 g j
@@ -111,6 +123,8 @@ g q
 g r
 g s
 g t
+g u
+g v
 h i
 h j
 h k
@@ -123,6 +137,8 @@ h q
 h r
 h s
 h t
+h u
+h v
 i j
 i k
 i l
@@ -134,6 +150,8 @@ i q
 i r
 i s
 i t
+i u
+i v
 j k
 j l
 j m
@@ -144,6 +162,8 @@ j q
 j r
 j s
 j t
+j u
+j v
 k l
 k m
 k n
@@ -153,6 +173,8 @@ k q
 k r
 k s
 k t
+k u
+k v
 l m
 l n
 l o
@@ -161,6 +183,8 @@ l q
 l r
 l s
 l t
+l u
+l v
 m n
 m o
 m p
@@ -168,24 +192,41 @@ m q
 m r
 m s
 m t
+m u
+m v
 n o
 n p
 n q
 n r
 n s
 n t
+n u
+n v
 o p
 o q
 o r
 o s
 o t
+o u
+o v
 p q
 p r
 p s
 p t
+p u
+p v
 q r
 q s
 q t
+q u
+q v
 r s
 r t
+r u
+r v
 s t
+s u
+s v
+t u
+t v
+u v
