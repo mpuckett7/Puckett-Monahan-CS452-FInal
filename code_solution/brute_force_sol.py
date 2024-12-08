@@ -3,7 +3,7 @@ from datetime import datetime
 
 vertices = {}
 num_edges = 0
-edges = [[]]
+edges = []
 
 #Find out if a given set of vertices is a clique
 def is_clique(t):
@@ -27,13 +27,11 @@ def max_cliques(s, e):
     num_v = len(vertices.keys())
 
     #check every vertex eventually
-    for i in range(s + 1, num_v + 1):
-
-        if (is_clique(e + 1)):
-
+    for i in range(s, num_v):
+        # Add current vertex to potential clique
+        if is_clique(e):
             mc = max(mc, e)
-
-            mc = max(mc, max_cliques(i, e + 1))
+            mc = max(mc, max_cliques(i + 1, e + 1))
 
     return mc
 
