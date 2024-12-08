@@ -35,6 +35,11 @@ def fiege_max_clique_approx(graph, iterations=1000):
 
 if __name__ == '__main__':
 
+    vertices = {}
+    num_edges = 0
+    edges = []
+
+
     now = datetime.now()
     curr_time = now.strftime("%H: %M: %S")
     print("Current time = ", curr_time)
@@ -68,8 +73,8 @@ if __name__ == '__main__':
 
     for v in vertices.keys():
         neighbors = []
-        for i in range(1, len(edges[v])):
-            if edges[v][i] == 1:
+        for i in range(1, len(edges[vertices[v]])):
+            if edges[vertices[v]][i] == 1:
                 neighbors.append(i)
 
         graph[vertices[v]] = neighbors
