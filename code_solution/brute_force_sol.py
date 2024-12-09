@@ -1,6 +1,7 @@
 #Citation: geeksforgeeks maximal clique problem recursive solution
 # https://www.geeksforgeeks.org/maximal-clique-problem-recursive-solution/
 
+# Written By: Mason Puckett and Annabelle Monahan
 import sys
 from datetime import datetime
 

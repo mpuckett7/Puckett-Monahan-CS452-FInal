@@ -1,6 +1,8 @@
 #Based on the Bron-Kerbosch Algorithm without Pivoting or Vertex Ordering
 #Citation: Wikipedia https://en.wikipedia.org/wiki/Bron%E2%80%93Kerbosch_algorithm
 #https://gist.github.com/abhin4v/8304062 which is in the wiki pages external links
+
+# Written By: Mason Puckett and Annabelle Monahan
 import sys
 from datetime import datetime
 from collections import defaultdict

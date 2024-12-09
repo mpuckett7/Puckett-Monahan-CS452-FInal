@@ -2,6 +2,7 @@
 #Citations: chatgpt for psuedocode because theres a pay wall at a journal database
 #Wikipedia- clique problem/maximum clique
 
+# Written By: Mason Puckett and Annabelle Monahan
 import sys
 from datetime import datetime
 import random
