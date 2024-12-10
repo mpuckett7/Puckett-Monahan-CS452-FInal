@@ -20,3 +20,14 @@ If there is an error in the script ie. "command not found python"; please edit t
 python3 instead of python for every run command (issue we ran into with our laptops)
 
 ie. "python bron-kerbosch.py test_case4" would become "python3 bron-kerbosch.py test_case4"
+
+To run the variance script:
+cd into the code-solution directory
+
+give yourself execute permission for the variance_script.sh
+chmod +x variance_script.sh
+
+then run the shell script
+./variance_script.sh
+
+You may run into the same problem in which case please make the same edit.
