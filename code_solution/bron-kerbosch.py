@@ -83,4 +83,4 @@ if __name__ == '__main__':
     curr_time = now.strftime("%H: %M: %S")
     print("Current time = ", curr_time)
 
-    print(len(cliques[0]))
+    print(len(cliques[-1]))

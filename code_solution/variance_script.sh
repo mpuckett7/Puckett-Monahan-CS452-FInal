@@ -51,6 +51,30 @@ python approximation.py test_case6
 echo
 echo
 
+echo "=== Test Case 6v ==="
+echo "Run 1"
+python approximation.py test_case6v
+echo "Run 2"
+python approximation.py test_case6v
+echo "Run 3"
+python approximation.py test_case6v
+echo "Run 4"
+python approximation.py test_case6v
+echo "Run 5"
+python approximation.py test_case6v
+echo "Run 6"
+python approximation.py test_case6v
+echo "Run 7"
+python approximation.py test_case6v
+echo "Run 8"
+python approximation.py test_case6v
+echo "Run 9"
+python approximation.py test_case6v
+echo "Run 10"
+python approximation.py test_case6v
+echo
+echo
+
 echo "=== Test Case 10 ==="
 echo "Run 1"
 python approximation.py test_case10
@@ -72,6 +96,30 @@ echo "Run 9"
 python approximation.py test_case10
 echo "Run 10"
 python approximation.py test_case10
+echo
+echo
+
+echo "=== Test Case 10v ==="
+echo "Run 1"
+python approximation.py test_case10v
+echo "Run 2"
+python approximation.py test_case10v
+echo "Run 3"
+python approximation.py test_case10v
+echo "Run 4"
+python approximation.py test_case10v
+echo "Run 5"
+python approximation.py test_case10v
+echo "Run 6"
+python approximation.py test_case10v
+echo "Run 7"
+python approximation.py test_case10v
+echo "Run 8"
+python approximation.py test_case10v
+echo "Run 9"
+python approximation.py test_case10v
+echo "Run 10"
+python approximation.py test_case10v
 echo
 echo
 
@@ -99,6 +147,30 @@ python approximation.py test_case16
 echo
 echo
 
+echo "=== Test Case 16v ==="
+echo "Run 1"
+python approximation.py test_case16v
+echo "Run 2"
+python approximation.py test_case16v
+echo "Run 3"
+python approximation.py test_case16v
+echo "Run 4"
+python approximation.py test_case16v
+echo "Run 5"
+python approximation.py test_case16v
+echo "Run 6"
+python approximation.py test_case16v
+echo "Run 7"
+python approximation.py test_case16v
+echo "Run 8"
+python approximation.py test_case16v
+echo "Run 9"
+python approximation.py test_case16v
+echo "Run 10"
+python approximation.py test_case16v
+echo
+echo
+
 echo "=== Test Case 20 ==="
 echo "Run 1"
 python approximation.py test_case20
@@ -120,6 +192,30 @@ echo "Run 9"
 python approximation.py test_case20
 echo "Run 10"
 python approximation.py test_case20
+echo
+echo
+
+echo "=== Test Case 20v ==="
+echo "Run 1"
+python approximation.py test_case20v
+echo "Run 2"
+python approximation.py test_case20v
+echo "Run 3"
+python approximation.py test_case20v
+echo "Run 4"
+python approximation.py test_case20v
+echo "Run 5"
+python approximation.py test_case20v
+echo "Run 6"
+python approximation.py test_case20v
+echo "Run 7"
+python approximation.py test_case20v
+echo "Run 8"
+python approximation.py test_case20v
+echo "Run 9"
+python approximation.py test_case20v
+echo "Run 10"
+python approximation.py test_case20v
 echo
 echo
 

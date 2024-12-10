@@ -2,6 +2,7 @@
 
 Running test cases:
 Naming convention -> test_case# where # is the maximum clique in the graph
+                  -> test_case#v signifies that the correct maximum clique is not the entire graph to introduce edges/vertices that aren't part of the clique
 
 cd into the code_solution directory
 cd code_solution/
